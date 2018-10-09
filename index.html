@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Trivia Game</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>    
+</head>
+<body>
+    <div class="container">
+        <div class="row col-lg-8 offset-lg-2" id="title">
+            <h1 class="display-3" id="title" ><b>Total Trivial Trivia!</b></h1>
+            <h2 class="display-4" id="time" style="visibility:hidden">Time Remaining: </h2>            
+        </div> 
+        <div class="col-lg-8 offset-lg-2 justify-content-center" id="start">       
+            <!-- <hr class="my-4"> -->
+            <!-- <h2>Time Remaining: <span id="timeLeft"> </span></h3> -->
+            <button class="btn btn-primary btn-lg" href="#" role="button">Start the Game</button>
+        </div>
+    </div>
+    <div class="container">  
+        <div class="card" id="card" style="visibility:hidden">
+            <div class="card-header" id="questions">
+                Which U.S. president issued the Emancipation Proclamation?
+            </div>
+            <div class="card-body" id="options">
+                <div class="form-check">
+                    <input class="form-check-input btnA" type="radio" name="radio" id="radioBtn" value="Abraham Lincoln">
+                    <label class="form-check-label" for="radioBtn" id="ansA">
+                        Abraham Lincoln
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input btnB" type="radio" name="radio" id="radioBtn" value="George Washington">
+                    <label class="form-check-label" for="radioBtn" id="ansB">
+                        George Washington
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input btnC" type="radio" name="radio" id="radioBtn" value="James Edison">
+                    <label class="form-check-label" for="radioBtn" id="ansC">
+                        James Edison
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input btnD" type="radio" name="radio" id="radioBtn" value="Andrew Johnson">
+                    <label class="form-check-label" for="radioBtn" id="ansD">
+                        Andrew Johnson
+                    </label>
+                </div>                  
+            </div>
+        </div> 
+        <div class="col-lg-8 offset-lg-2 justify-content-center" id="submit" style="visibility:hidden">       
+                <!-- <hr class="my-4"> -->
+                <!-- <h2>Time Remaining: <span id="timeLeft"> </span></h3> -->
+                <button class="btn btn-primary btn-lg" href="#" role="button">Submit</button>
+        </div>      
+    </div>
+
+    <script src="assets/javascript/app.js"></script>
+</body>
+</html>
