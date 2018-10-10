@@ -1,3 +1,30 @@
-/* .card {
-    visibility: hidden;
-} */
+body {
+    background-image: url("../images/images.jpg")
+}
+
+#cont{
+    background: lightcoral;
+}
+
+#title {
+    /* background: green; */
+    margin-top: 50px;
+}
+
+#gameQ{
+    /* background: red; */
+    margin-top: 10px;
+}
+
+#result{
+    /* background: yellow; */
+}
+
+#card{
+    margin-top: 10px;
+}
+
+#submit{
+    margin-top: 10px;
+    padding-bottom: 10px;
+}

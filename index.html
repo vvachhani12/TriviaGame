@@ -10,19 +10,18 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>    
 </head>
 <body>
-    <div class="container">
-        <div class="row col-lg-8 offset-lg-2" id="title">
-            <h1 class="display-3" id="title" ><b>Total Trivial Trivia!</b></h1>
+    <div class="container" id="cont">
+    <div class="container" id="title">
+        <div class="row col-lg-8 offset-lg-2">
+            <h1 class="display-3"><b>Total Trivial Trivia!</b></h1>
             <h2 class="display-4" id="time" style="visibility:hidden">Time Remaining: </h2>            
         </div> 
-        <div class="col-lg-8 offset-lg-2 justify-content-center" id="start">       
-            <!-- <hr class="my-4"> -->
-            <!-- <h2>Time Remaining: <span id="timeLeft"> </span></h3> -->
+        <div class="col-lg-8 offset-lg-2 justify-content-center" id="start">
             <button class="btn btn-primary btn-lg" href="#" role="button">Start the Game</button>
         </div>
     </div>
-    <div class="container">  
-        <div class="card" id="card" style="visibility:hidden">
+    <div class="container" id = gameQ style="visibility:hidden">  
+        <div class="card" id="card">
             <div class="card-header" id="questions">
                 Which U.S. president issued the Emancipation Proclamation?
             </div>
@@ -53,11 +52,19 @@
                 </div>                  
             </div>
         </div> 
-        <div class="col-lg-8 offset-lg-2 justify-content-center" id="submit" style="visibility:hidden">       
-                <!-- <hr class="my-4"> -->
-                <!-- <h2>Time Remaining: <span id="timeLeft"> </span></h3> -->
-                <button class="btn btn-primary btn-lg" href="#" role="button">Submit</button>
+        <div class="col-lg-8 offset-lg-2 justify-content-center" id="submit">
+            <button class="btn btn-primary btn-lg" href="#" role="button">Submit</button>
         </div>      
+    </div>
+    <div class="container" id="result" style="visibility:hidden">
+        <div>
+            <h2 id="correctResult"></h2>
+            <h2 id="incorrectResult"></h2>            
+        </div> 
+        <!-- <div class="col-lg-8 offset-lg-2 justify-content-center" id="restart">
+            <button class="btn btn-primary btn-lg" href="#" role="button">Restart the Game</button>
+        </div> -->
+    </div>
     </div>
 
     <script src="assets/javascript/app.js"></script>

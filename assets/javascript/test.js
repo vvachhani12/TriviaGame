@@ -181,10 +181,10 @@ $(document).ready(function(){
     
     //**** Game Time clock ****//   
     var gameTime = {
-        time: 15,
+        time: 10,
 
         reset: function(){
-            gameTime.time = 15;
+            gameTime.time = 10;
             timeLeft.text("Time Remaining: ",i);
         },
 
@@ -233,6 +233,12 @@ $(document).ready(function(){
     // })
     
 });
+    
+    
+    
+    
+    
+    
     
     /****** Object with all the question, list of answer and correct answer ********/
     /****** on start button click, hide the start button and display the first question ******/
