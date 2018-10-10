@@ -12,7 +12,7 @@
 <body>
     <div class="container" id="cont">
     <div class="container" id="title">
-        <div class="row col-lg-8 offset-lg-2">
+        <div class="row col-lg-8 offset-lg-2" id="title2">
             <h1 class="display-3"><b>Total Trivial Trivia!</b></h1>
             <h2 class="display-4" id="time" style="visibility:hidden">Time Remaining: </h2>            
         </div> 
@@ -20,7 +20,7 @@
             <button class="btn btn-primary btn-lg" href="#" role="button">Start the Game</button>
         </div>
     </div>
-    <div class="container" id = gameQ style="visibility:hidden">  
+    <div class="container" id = gameQ style="display:none">  
         <div class="card" id="card">
             <div class="card-header" id="questions">
                 Which U.S. president issued the Emancipation Proclamation?
@@ -56,14 +56,14 @@
             <button class="btn btn-primary btn-lg" href="#" role="button">Submit</button>
         </div>      
     </div>
-    <div class="container" id="result" style="visibility:hidden">
+    <div class="container" id="result" style="display:none">
         <div>
-            <h2 id="correctResult"></h2>
-            <h2 id="incorrectResult"></h2>            
+            <h2>Correct Answers: <span id="correctResult"></span></h2>    
+            <h2>Incorrect Answers: <span id="incorrectResult"></span></h2>            
         </div> 
-        <!-- <div class="col-lg-8 offset-lg-2 justify-content-center" id="restart">
+        <div class="col-lg-8 offset-lg-2 justify-content-center" id="restart">
             <button class="btn btn-primary btn-lg" href="#" role="button">Restart the Game</button>
-        </div> -->
+        </div>
     </div>
     </div>
 

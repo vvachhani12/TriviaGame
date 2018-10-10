@@ -52,6 +52,9 @@ $(document).ready(function(){
             CorrectAnswer: "Washington"
         }
     ]
+
+    $(radioButton).attr("checked", false);
+
     //**** Variables ****//
     var triviaCard = $("#card");
     var gameQ = $("#gameQ");
@@ -95,7 +98,7 @@ $(document).ready(function(){
         // //**** Make the Submit button visible *****//
         // submitButton[0].style.visibility = "visible";
 
-        gameQ[0].style.visibility = "visible";
+        gameQ[0].style.display = "unset";
     
         nextQuestion();
     });
@@ -105,6 +108,13 @@ $(document).ready(function(){
         
         //**** Checks if the value of i is not greater than the length of the Object ****//
         if(i<triviaGame.length){
+
+            //for(var n=0; n<radioButton.length; n++){
+                // radioButton[j].onclick = function compareAns(){                
+                //     userAnswer = this.value;
+                // }
+                
+            //}
             
             //**** Start the Game Time clock ****//
             gameTime.start();
@@ -129,14 +139,14 @@ $(document).ready(function(){
             // console.log("Game Over");
             alert("Game Over");
             
-            console.log(gameQ);
-            console.log(triviaResult);
-            gameQ.prepend(triviaResult);
+            // console.log(gameQ);
+            // console.log(triviaResult);
+            $("#title2").append(triviaResult);
 
-            triviaResult[0].style.visibility = "visible";  // Hide the Question div //
-            $("#correctResult").append("Correct Answers: "+correctAns);
-            $("#incorrectResult").append("Incorrect Answers: "+incorrectAns); 
-            gameQ[0].style.visibility = "hidden";    
+            triviaResult[0].style.display = "unset";  // Hide the Question div //
+            $("#correctResult").text(correctAns);
+            $("#incorrectResult").text(incorrectAns); 
+            gameQ[0].style.display = "none";    
 
         }
     }
@@ -144,7 +154,7 @@ $(document).ready(function(){
     //**** Function to let the user select radio button option ****//
     function selectRadio(){    
         for(var j=0; j<radioButton.length; j++){
-            radioButton[j].onclick = function compareAns(){                
+            radioButton[j].onclick = function(){                
                 userAnswer = this.value;
             }
         }
@@ -161,7 +171,7 @@ $(document).ready(function(){
             alert("Correct Answer");
             correctAns++;
             clockRunning = false;
-            console.log(clockRunning);
+            //console.log(clockRunning);
         }
         else{
             alert("Incorrect Answer\n" +
@@ -181,10 +191,10 @@ $(document).ready(function(){
     
     //**** Game Time clock ****//   
     var gameTime = {
-        time: 15,
+        time: 20,
 
         reset: function(){
-            gameTime.time = 15;
+            gameTime.time = 20;
             timeLeft.text("Time Remaining: ",i);
         },
 
@@ -214,39 +224,21 @@ $(document).ready(function(){
         }
     }
 
-    // restartButton.on("click", function(){
+    //**** Restart game function ****//
+    restartButton.on("click", function(){
 
+        gameQ[0].style.display = "unset";  // make the Question div visible //
+        triviaResult[0].style.display = "none";  // make the Result div invisible //
 
-    //     console.log(triviaResult);
-    //     console.log(gameQ);
+        i=0;
+        correctAns = 0;
+        incorrectAns = 0;
+        console.log(i);
+        nextQuestion();
 
-    //     // triviaResult[0].prepend(gameQ[0]);
-    //     gameQ[0].style.visibility = "visible";
-    //     triviaResult[0].style.visibility = "hidden";
-
-    //     $("#title")[0].append(gameQ);
-
-    //     i=0;
-    //     console.log(i);
-    //     nextQuestion();
-
-    // })
+    })
     
 });
-    
-    /****** Object with all the question, list of answer and correct answer ********/
-    /****** on start button click, hide the start button and display the first question ******/
-    /****** start the clock ******/
-    /****** If the answer is write show correct and go to next question ******/
-    /****** If the answer is wrong show incorrect and go the next question ******/
-    /****** start the clock ******/
-    /****** start the clock ******/
-    /****** start the clock ******/
-    /****** start the clock ******/
-    /****** start the clock ******/
-    /****** start the clock ******/
-    /****** start the clock ******/
-    /****** start the clock ******/
     
     
     
