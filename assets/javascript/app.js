@@ -53,8 +53,6 @@ $(document).ready(function(){
         }
     ]
 
-    $(radioButton).attr("checked", false);
-
     //**** Variables ****//
     var triviaCard = $("#card");
     var gameQ = $("#gameQ");
@@ -109,12 +107,7 @@ $(document).ready(function(){
         //**** Checks if the value of i is not greater than the length of the Object ****//
         if(i<triviaGame.length){
 
-            //for(var n=0; n<radioButton.length; n++){
-                // radioButton[j].onclick = function compareAns(){                
-                //     userAnswer = this.value;
-                // }
-                
-            //}
+            $('input').prop("checked", false);
             
             //**** Start the Game Time clock ****//
             gameTime.start();
@@ -191,10 +184,10 @@ $(document).ready(function(){
     
     //**** Game Time clock ****//   
     var gameTime = {
-        time: 20,
+        time: 15,
 
         reset: function(){
-            gameTime.time = 20;
+            gameTime.time = 15;
             timeLeft.text("Time Remaining: ",i);
         },
 
@@ -235,7 +228,6 @@ $(document).ready(function(){
         incorrectAns = 0;
         console.log(i);
         nextQuestion();
-
     })
     
 });
